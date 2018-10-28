@@ -1,8 +1,8 @@
-'use strict';
+'use strict'
 
-var is = require('unist-util-is');
+var is = require('unist-util-is')
 
-module.exports = isPhrasing;
+module.exports = isPhrasing
 
 var phrasing = [
   'inlineCode',
@@ -17,9 +17,9 @@ var phrasing = [
   'imageReference',
   'footnoteReference',
   'text'
-];
+]
 
 /* Check if a node is a phrasing element */
 function isPhrasing(node) {
-  return is(phrasing, node);
+  return is(phrasing, node)
 }

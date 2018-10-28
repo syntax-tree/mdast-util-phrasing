@@ -13,17 +13,17 @@ npm install mdast-util-phrasing
 ## Usage
 
 ```javascript
-var phrasing = require('mdast-util-phrasing');
+var phrasing = require('mdast-util-phrasing')
 
 phrasing({
   type: 'paragraph',
   children: [{type: 'text', value: 'Alpha'}]
-}); //=> false
+}) // => false
 
 phrasing({
   type: 'strong',
   children: [{type: 'text', value: 'Delta'}]
-}); //=> true
+}) // => true
 ```
 
 ## API
