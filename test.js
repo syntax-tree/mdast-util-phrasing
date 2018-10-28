@@ -1,7 +1,7 @@
 'use strict';
 
 var test = require('tape');
-var phrasing = require('./index.js');
+var phrasing = require('.');
 
 test('phrasing', function (t) {
   t.equal(

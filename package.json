@@ -23,11 +23,11 @@
     "unist-util-is": "^2.1.1"
   },
   "devDependencies": {
-    "remark-cli": "^4.0.0",
-    "remark-preset-wooorm": "^3.0.0",
-    "nyc": "^11.0.0",
+    "remark-cli": "^6.0.0",
+    "remark-preset-wooorm": "^4.0.0",
+    "nyc": "^13.0.0",
     "tape": "^4.4.0",
-    "xo": "^0.18.1"
+    "xo": "^0.23.0"
   },
   "scripts": {
     "build-md": "remark . --quiet --frail --output",
@@ -36,7 +36,7 @@
     "test-api": "node test.js",
     "test-coverage": "nyc --reporter lcov tape test.js",
     "pretest": "npm run lint",
-    "test": "node test.js",
+    "test": "node test",
     "posttest": "npm run test-coverage"
   },
   "nyc": {
