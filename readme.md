@@ -50,7 +50,7 @@ repository, organisation, or community you agree to abide by its terms.
 
 ## License
 
-[MIT][license]
+[MIT][license] © [Victor Felder][author]
 
 <!-- Definitions -->
 
@@ -73,6 +73,8 @@ repository, organisation, or community you agree to abide by its terms.
 [npm]: https://docs.npmjs.com/cli/install
 
 [license]: license
+
+[author]: https://draft.li
 
 [node]: https://github.com/syntax-tree/mdast#ast
 
