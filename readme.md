@@ -1,4 +1,4 @@
-# mdast-util-phrasing [![Build Status][build-badge]][build-page] [![Coverage Status][coverage-badge]][coverage-page]
+# mdast-util-phrasing [![Build][build-badge]][build] [![Coverage][coverage-badge]][coverage] [![Downloads][downloads-badge]][downloads] [![Chat][chat-badge]][chat]
 
 Check if a [MDAST][] (markdown) [node][] is a phrasing element.
 
@@ -56,11 +56,19 @@ repository, organisation, or community you agree to abide by its terms.
 
 [build-badge]: https://img.shields.io/travis/syntax-tree/mdast-util-phrasing.svg
 
-[build-page]: https://travis-ci.org/syntax-tree/mdast-util-phrasing
+[build]: https://travis-ci.org/syntax-tree/mdast-util-phrasing
 
 [coverage-badge]: https://img.shields.io/codecov/c/github/syntax-tree/mdast-util-phrasing.svg
 
-[coverage-page]: https://codecov.io/github/syntax-tree/mdast-util-phrasing?branch=master
+[coverage]: https://codecov.io/github/syntax-tree/mdast-util-phrasing
+
+[downloads-badge]: https://img.shields.io/npm/dm/mdast-util-phrasing.svg
+
+[downloads]: https://www.npmjs.com/package/mdast-util-phrasing
+
+[chat-badge]: https://img.shields.io/badge/join%20the%20community-on%20spectrum-7b16ff.svg
+
+[chat]: https://spectrum.chat/unified/remark
 
 [npm]: https://docs.npmjs.com/cli/install
 
