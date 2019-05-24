@@ -5,17 +5,17 @@ var is = require('unist-util-is')
 module.exports = isPhrasing
 
 var phrasing = [
-  'inlineCode',
-  'emphasis',
   'break',
-  'strong',
   'delete',
-  'link',
-  'image',
+  'emphasis',
   'footnote',
-  'linkReference',
-  'imageReference',
   'footnoteReference',
+  'image',
+  'imageReference',
+  'inlineCode',
+  'link',
+  'linkReference',
+  'strong',
   'text'
 ]
 
