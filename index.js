@@ -19,7 +19,7 @@ var phrasing = [
   'text'
 ]
 
-/* Check if a node is a phrasing element */
+// Check if a node is a phrasing element.
 function isPhrasing(node) {
   return is(phrasing, node)
 }
