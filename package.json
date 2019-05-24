@@ -5,6 +5,9 @@
   "license": "MIT",
   "keywords": [
     "mdast",
+    "unist",
+    "util",
+    "utility",
     "remark",
     "markdown",
     "phrasing"
