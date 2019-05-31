@@ -1,10 +1,8 @@
 'use strict'
 
-var is = require('unist-util-is')
+var convert = require('unist-util-is/convert')
 
-module.exports = isPhrasing
-
-var phrasing = [
+var isPhrasing = convert([
   'break',
   'delete',
   'emphasis',
@@ -17,9 +15,7 @@ var phrasing = [
   'linkReference',
   'strong',
   'text'
-]
+])
 
-// Check if a node is a phrasing element.
-function isPhrasing(node) {
-  return is(phrasing, node)
-}
+isPhrasing.displayName = 'isPhrasing'
+module.exports = isPhrasing
