@@ -48,6 +48,12 @@ Check if the given value is a phrasing element.
 
 `boolean` — whether `node` is [phrasing content][phrasing].
 
+## Security
+
+Use of `mdast-util-phrasing` does not involve [**hast**][hast], user content,
+or change the tree, so there are no openings for
+[cross-site scripting (XSS)][xss] attacks.
+
 ## Contribute
 
 See [`contributing.md` in `syntax-tree/.github`][contributing] for ways to get
@@ -107,3 +113,7 @@ abide by its terms.
 [node]: https://github.com/syntax-tree/mdast#nodes
 
 [phrasing]: https://github.com/syntax-tree/mdast#phrasingcontent
+
+[xss]: https://en.wikipedia.org/wiki/Cross-site_scripting
+
+[hast]: https://github.com/syntax-tree/hast
