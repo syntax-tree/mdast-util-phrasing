@@ -14,6 +14,10 @@
   ],
   "repository": "syntax-tree/mdast-util-phrasing",
   "bugs": "https://github.com/syntax-tree/mdast-util-phrasing/issues",
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/unified"
+  },
   "author": "Victor Felder <victor@draft.li> (https://draft.li)",
   "contributors": [
     "Victor Felder <victor@draft.li> (https://draft.li)",
