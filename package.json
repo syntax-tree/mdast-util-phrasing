@@ -1,14 +1,14 @@
 {
   "name": "mdast-util-phrasing",
   "version": "1.0.3",
-  "description": "Check if a node is a phrasing element",
+  "description": "mdast utility to check if a node is phrasing content",
   "license": "MIT",
   "keywords": [
-    "mdast",
     "unist",
+    "mdast",
+    "mdast=util",
     "util",
     "utility",
-    "remark",
     "markdown",
     "phrasing"
   ],
