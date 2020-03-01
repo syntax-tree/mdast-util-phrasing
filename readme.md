@@ -54,6 +54,13 @@ Use of `mdast-util-phrasing` does not involve [**hast**][hast], user content,
 or change the tree, so there are no openings for
 [cross-site scripting (XSS)][xss] attacks.
 
+## Related
+
+*   [`hast-util-phrasing`](https://github.com/syntax-tree/hast-util-phrasing)
+    — check if a hast node is phrasing content
+*   [`unist-util-is`](https://github.com/syntax-tree/unist-util-is)
+    — check if a node passes a test
+
 ## Contribute
 
 See [`contributing.md` in `syntax-tree/.github`][contributing] for ways to get
