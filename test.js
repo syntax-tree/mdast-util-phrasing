@@ -3,7 +3,7 @@
 var test = require('tape')
 var phrasing = require('.')
 
-test('phrasing', function(t) {
+test('phrasing', function (t) {
   t.equal(phrasing(), false, 'should return `false` without node')
 
   t.equal(phrasing(null), false, 'should return `false` with `null`')
