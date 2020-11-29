@@ -77,9 +77,9 @@ abide by its terms.
 
 <!-- Definitions -->
 
-[build-badge]: https://img.shields.io/travis/syntax-tree/mdast-util-phrasing.svg
+[build-badge]: https://github.com/syntax-tree/mdast-util-phrasing/workflows/main/badge.svg
 
-[build]: https://travis-ci.org/syntax-tree/mdast-util-phrasing
+[build]: https://github.com/syntax-tree/mdast-util-phrasing/actions
 
 [coverage-badge]: https://img.shields.io/codecov/c/github/syntax-tree/mdast-util-phrasing.svg
 
