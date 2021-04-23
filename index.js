@@ -1,8 +1,6 @@
-'use strict'
+import {convert} from 'unist-util-is'
 
-var convert = require('unist-util-is/convert')
-
-var isPhrasing = convert([
+export const phrasing = convert([
   'break',
   'delete',
   'emphasis',
@@ -17,5 +15,4 @@ var isPhrasing = convert([
   'text'
 ])
 
-isPhrasing.displayName = 'isPhrasing'
-module.exports = isPhrasing
+phrasing.displayName = 'isPhrasing'

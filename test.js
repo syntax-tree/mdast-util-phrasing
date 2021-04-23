@@ -1,7 +1,5 @@
-'use strict'
-
-var test = require('tape')
-var phrasing = require('.')
+import test from 'tape'
+import {phrasing} from './index.js'
 
 test('phrasing', function (t) {
   t.equal(phrasing(), false, 'should return `false` without node')

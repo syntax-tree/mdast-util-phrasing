@@ -12,6 +12,9 @@ Check if a [mdast][] [node][] is [phrasing content][phrasing].
 
 ## Install
 
+This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c):
+Node 12+ is needed to use it and it must be `import`ed instead of `require`d.
+
 [npm][]:
 
 ```sh
@@ -21,7 +24,7 @@ npm install mdast-util-phrasing
 ## Use
 
 ```js
-var phrasing = require('mdast-util-phrasing')
+import {phrasing} from 'mdast-util-phrasing'
 
 phrasing({
   type: 'paragraph',
@@ -35,6 +38,9 @@ phrasing({
 ```
 
 ## API
+
+This package exports the following identifiers: `phrasing`.
+There is no default export.
 
 ### `phrasing(node)`
 
