@@ -1,7 +1,7 @@
 import test from 'tape'
 import {phrasing} from './index.js'
 
-test('phrasing', function (t) {
+test('phrasing', (t) => {
   t.equal(phrasing(), false, 'should return `false` without node')
 
   t.equal(phrasing(null), false, 'should return `false` with `null`')
