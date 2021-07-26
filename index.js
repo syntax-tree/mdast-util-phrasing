@@ -5,21 +5,19 @@
 
 import {convert} from 'unist-util-is'
 
-/**
- * @type {AssertPredicatePhrasing}
- */
-// @ts-ignore hush, it’s fine!
-export const phrasing = convert([
-  'break',
-  'delete',
-  'emphasis',
-  'footnote',
-  'footnoteReference',
-  'image',
-  'imageReference',
-  'inlineCode',
-  'link',
-  'linkReference',
-  'strong',
-  'text'
-])
+export const phrasing = /** @type {AssertPredicatePhrasing} */ (
+  convert([
+    'break',
+    'delete',
+    'emphasis',
+    'footnote',
+    'footnoteReference',
+    'image',
+    'imageReference',
+    'inlineCode',
+    'link',
+    'linkReference',
+    'strong',
+    'text'
+  ])
+)
