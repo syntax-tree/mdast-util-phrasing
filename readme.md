@@ -8,17 +8,57 @@
 [![Backers][backers-badge]][collective]
 [![Chat][chat-badge]][chat]
 
-Check if an [mdast][] [node][] is [phrasing content][phrasing].
+[mdast][] utility to check if a node is phrasing content.
+
+## Contents
+
+*   [What is this?](#what-is-this)
+*   [When should I use this?](#when-should-i-use-this)
+*   [Install](#install)
+*   [Use](#use)
+*   [API](#api)
+    *   [`phrasing(node)`](#phrasingnode)
+*   [Types](#types)
+*   [Compatibility](#compatibility)
+*   [Security](#security)
+*   [Related](#related)
+*   [Contribute](#contribute)
+*   [License](#license)
+
+## What is this?
+
+This package is a tiny utility to check that a given [node][] is [phrasing
+content][phrasing].
+
+## When should I use this?
+
+This utility is typically useful if you’re making other utilities.
+It uses [`unist-util-is`][unist-util-is], which you can use for your own checks.
+
+A different utility, [`hast-util-phrasing`][hast-util-phrasing], does the same
+but on [hast][].
 
 ## Install
 
-This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c):
-Node 12+ is needed to use it and it must be `import`ed instead of `require`d.
-
-[npm][]:
+This package is [ESM only][esm].
+In Node.js (version 12.20+, 14.14+, or 16.0+), install with [npm][]:
 
 ```sh
 npm install mdast-util-phrasing
+```
+
+In Deno with [`esm.sh`][esmsh]:
+
+```js
+import {phrasing} from 'https://esm.sh/mdast-util-phrasing@3'
+```
+
+In browsers with [`esm.sh`][esmsh]:
+
+```html
+<script type="module">
+  import {phrasing} from 'https://esm.sh/mdast-util-phrasing@3?bundle'
+</script>
 ```
 
 ## Use
@@ -26,39 +66,43 @@ npm install mdast-util-phrasing
 ```js
 import {phrasing} from 'mdast-util-phrasing'
 
-phrasing({
-  type: 'paragraph',
-  children: [{type: 'text', value: 'Alpha'}]
-}) // => false
+phrasing({type: 'paragraph', children: [{type: 'text', value: 'Alpha'}]})
+// => false
 
-phrasing({
-  type: 'strong',
-  children: [{type: 'text', value: 'Delta'}]
-}) // => true
+phrasing({type: 'strong', children: [{type: 'text', value: 'Delta'}]})
+// => true
 ```
 
 ## API
 
-This package exports the following identifiers: `phrasing`.
+This package exports the identifier `phrasing`.
 There is no default export.
 
 ### `phrasing(node)`
 
-Check if the given value is a phrasing element.
-
-###### Parameters
-
-`node` (`*`) — Value to check, typically a [node][].
+Check if the given value (`unknown`) is phrasing content.
 
 ###### Returns
 
-`boolean` — whether `node` is [phrasing content][phrasing].
+Whether `node` is [phrasing content][phrasing] (`boolean`).
+
+## Types
+
+This package is fully typed with [TypeScript][].
+It does not export extra types.
+
+## Compatibility
+
+Projects maintained by the unified collective are compatible with all maintained
+versions of Node.js.
+As of now, that is Node.js 12.20+, 14.14+, and 16.0+.
+Our projects sometimes work with older versions, but this is not guaranteed.
 
 ## Security
 
-Use of `mdast-util-phrasing` does not involve [**hast**][hast], user content,
-or change the tree, so there are no openings for
-[cross-site scripting (XSS)][xss] attacks.
+Use of `mdast-util-phrasing` does not involve **[hast][]**, user content, or
+change the tree, so there are no openings for [cross-site scripting (XSS)][xss]
+attacks.
 
 ## Related
 
@@ -69,8 +113,8 @@ or change the tree, so there are no openings for
 
 ## Contribute
 
-See [`contributing.md` in `syntax-tree/.github`][contributing] for ways to get
-started.
+See [`contributing.md`][contributing] in [`syntax-tree/.github`][health] for
+ways to get started.
 See [`support.md`][support] for ways to get help.
 
 This project has a [code of conduct][coc].
@@ -111,15 +155,27 @@ abide by its terms.
 
 [npm]: https://docs.npmjs.com/cli/install
 
+[esm]: https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
+
+[esmsh]: https://esm.sh
+
+[typescript]: https://www.typescriptlang.org
+
 [license]: license
 
 [author]: https://draft.li
 
-[contributing]: https://github.com/syntax-tree/.github/blob/HEAD/contributing.md
+[health]: https://github.com/syntax-tree/.github
 
-[support]: https://github.com/syntax-tree/.github/blob/HEAD/support.md
+[contributing]: https://github.com/syntax-tree/.github/blob/main/contributing.md
 
-[coc]: https://github.com/syntax-tree/.github/blob/HEAD/code-of-conduct.md
+[support]: https://github.com/syntax-tree/.github/blob/main/support.md
+
+[coc]: https://github.com/syntax-tree/.github/blob/main/code-of-conduct.md
+
+[xss]: https://en.wikipedia.org/wiki/Cross-site_scripting
+
+[hast]: https://github.com/syntax-tree/hast
 
 [mdast]: https://github.com/syntax-tree/mdast
 
@@ -127,6 +183,6 @@ abide by its terms.
 
 [phrasing]: https://github.com/syntax-tree/mdast#phrasingcontent
 
-[xss]: https://en.wikipedia.org/wiki/Cross-site_scripting
+[unist-util-is]: https://github.com/syntax-tree/unist-util-is
 
-[hast]: https://github.com/syntax-tree/hast
+[hast-util-phrasing]: https://github.com/syntax-tree/hast-util-phrasing
