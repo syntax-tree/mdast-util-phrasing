@@ -8,7 +8,7 @@
 [![Backers][backers-badge]][collective]
 [![Chat][chat-badge]][chat]
 
-Check if a [mdast][] [node][] is [phrasing content][phrasing].
+Check if an [mdast][] [node][] is [phrasing content][phrasing].
 
 ## Install
 
