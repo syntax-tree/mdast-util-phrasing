@@ -17,7 +17,7 @@
 *   [Install](#install)
 *   [Use](#use)
 *   [API](#api)
-    *   [`phrasing(node)`](#phrasingnode)
+    *   [`phrasing(value)`](#phrasingvalue)
 *   [Types](#types)
 *   [Compatibility](#compatibility)
 *   [Security](#security)
@@ -41,7 +41,7 @@ but on [hast][].
 ## Install
 
 This package is [ESM only][esm].
-In Node.js (version 12.20+, 14.14+, or 16.0+), install with [npm][]:
+In Node.js (version 14.14+ and 16.0+), install with [npm][]:
 
 ```sh
 npm install mdast-util-phrasing
@@ -75,16 +75,21 @@ phrasing({type: 'strong', children: [{type: 'text', value: 'Delta'}]})
 
 ## API
 
-This package exports the identifier `phrasing`.
+This package exports the identifier [`phrasing`][api-phrasing].
 There is no default export.
 
-### `phrasing(node)`
+### `phrasing(value)`
 
-Check if the given value (`unknown`) is phrasing content.
+Check if the given value is *[phrasing content][phrasing]*.
+
+###### Parameters
+
+*   `value` (`unknown`)
+    — thing to check, typically [`Node`][node]
 
 ###### Returns
 
-Whether `node` is [phrasing content][phrasing] (`boolean`).
+Whether `value` is phrasing content (`boolean`).
 
 ## Types
 
@@ -95,7 +100,7 @@ It does not export extra types.
 
 Projects maintained by the unified collective are compatible with all maintained
 versions of Node.js.
-As of now, that is Node.js 12.20+, 14.14+, and 16.0+.
+As of now, that is Node.js 14.14+ and 16.0+.
 Our projects sometimes work with older versions, but this is not guaranteed.
 
 ## Security
@@ -186,3 +191,5 @@ abide by its terms.
 [unist-util-is]: https://github.com/syntax-tree/unist-util-is
 
 [hast-util-phrasing]: https://github.com/syntax-tree/hast-util-phrasing
+
+[api-phrasing]: #phrasingvalue
