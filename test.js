@@ -1,8 +1,15 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
 import {phrasing} from './index.js'
+import * as mod from './index.js'
 
 test('phrasing', () => {
+  assert.deepEqual(
+    Object.keys(mod).sort(),
+    ['phrasing'],
+    'should expose the public api'
+  )
+
   assert.equal(phrasing(), false, 'should return `false` without node')
 
   assert.equal(phrasing(null), false, 'should return `false` with `null`')
