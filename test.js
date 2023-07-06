@@ -1,46 +1,54 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
 import {phrasing} from './index.js'
-import * as mod from './index.js'
 
-test('phrasing', () => {
-  assert.deepEqual(
-    Object.keys(mod).sort(),
-    ['phrasing'],
-    'should expose the public api'
+test('phrasing', async function (t) {
+  await t.test('should expose the public api', async function () {
+    assert.deepEqual(Object.keys(await import('./index.js')).sort(), [
+      'phrasing'
+    ])
+  })
+
+  await t.test('should return `false` without node', async function () {
+    assert.equal(phrasing(), false)
+  })
+
+  await t.test('should return `false` with `null`', async function () {
+    assert.equal(phrasing(null), false)
+  })
+
+  await t.test(
+    'should return `false` when without known `node`',
+    async function () {
+      assert.equal(phrasing({type: 'foo'}), false)
+    }
   )
 
-  assert.equal(phrasing(), false, 'should return `false` without node')
-
-  assert.equal(phrasing(null), false, 'should return `false` with `null`')
-
-  assert.equal(
-    phrasing({type: 'foo'}),
-    false,
-    'should return `false` when without known `node`'
+  await t.test(
+    'should return `true` when with a phrasing `node`',
+    async function () {
+      assert.equal(phrasing({type: 'link'}), true)
+    }
   )
 
-  assert.equal(
-    phrasing({type: 'link'}),
-    true,
-    'should return `true` when with a phrasing `node`'
+  await t.test(
+    'should return `true` when with another phrasing `node`',
+    async function () {
+      assert.equal(phrasing({type: 'strong'}), true)
+    }
   )
 
-  assert.equal(
-    phrasing({type: 'strong'}),
-    true,
-    'should return `true` when with another phrasing `node`'
+  await t.test(
+    'should return `false` when with a block `node`',
+    async function () {
+      assert.equal(phrasing({type: 'paragraph'}), false)
+    }
   )
 
-  assert.equal(
-    phrasing({type: 'paragraph'}),
-    false,
-    'should return `false` when with a block `node`'
-  )
-
-  assert.equal(
-    phrasing({type: 'list'}),
-    false,
-    'should return `false` when with another block `node`'
+  await t.test(
+    'should return `false` when with another block `node`',
+    async function () {
+      assert.equal(phrasing({type: 'list'}), false)
+    }
   )
 })
