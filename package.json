@@ -1,6 +1,6 @@
 {
   "name": "mdast-util-phrasing",
-  "version": "3.0.1",
+  "version": "4.0.0",
   "description": "mdast utility to check if a node is phrasing content",
   "license": "MIT",
   "keywords": [

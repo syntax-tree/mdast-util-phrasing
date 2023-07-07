@@ -50,14 +50,14 @@ npm install mdast-util-phrasing
 In Deno with [`esm.sh`][esmsh]:
 
 ```js
-import {phrasing} from 'https://esm.sh/mdast-util-phrasing@3'
+import {phrasing} from 'https://esm.sh/mdast-util-phrasing@4'
 ```
 
 In browsers with [`esm.sh`][esmsh]:
 
 ```html
 <script type="module">
-  import {phrasing} from 'https://esm.sh/mdast-util-phrasing@3?bundle'
+  import {phrasing} from 'https://esm.sh/mdast-util-phrasing@4?bundle'
 </script>
 ```
 
