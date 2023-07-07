@@ -82,6 +82,8 @@ There is no default export.
 
 Check if the given value is *[phrasing content][phrasing]*.
 
+> 👉 **Note**: Excludes `html`, which can be both phrasing or flow.
+
 ###### Parameters
 
 *   `value` (`unknown`)
