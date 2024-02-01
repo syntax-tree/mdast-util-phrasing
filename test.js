@@ -51,4 +51,8 @@ test('phrasing', async function (t) {
       assert.equal(phrasing({type: 'list'}), false)
     }
   )
+
+  await t.test('should support common extensions', async function () {
+    assert.equal(phrasing({type: 'textDirective'}), true)
+  })
 })
